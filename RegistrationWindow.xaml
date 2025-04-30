@@ -31,7 +31,7 @@
                     FontSize="20" 
                     FontWeight="Bold"
                     HorizontalAlignment="Center"
-                    Margin="0,20,0,5"/>
+                    Margin="0,20,0,5"/> 
 
                 <TextBlock Text="на корпоративный портал!" 
                     FontWeight="Bold"
