@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppClient"
         mc:Ignorable="d"
-        Title="Авторизация"
+        Title="Авторизация" 
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanResize">
 
