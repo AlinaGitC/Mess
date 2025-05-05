@@ -18,6 +18,8 @@ public partial class Chat
     public int? ID_ChatType { get; set; }
 
     public string ChatTopic { get; set; }
+    public string AvatarChat { get; set; }
+
 
     public virtual ICollection<ChatGroup> ChatGroups { get; set; } = new List<ChatGroup>();
 

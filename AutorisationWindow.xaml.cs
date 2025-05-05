@@ -19,11 +19,12 @@ namespace AppClient
         public AutorisationWindow()
         {
             InitializeComponent();
+            this.WindowState = WindowState.Maximized;
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-           new MainClientWindow().Show();
+           new MainFrameWindow().Show();
            this.Close();
         }
 

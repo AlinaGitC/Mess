@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppClient"
         mc:Ignorable="d"
-        Title="RegistrationWindow" Height="450" Width="800"        WindowStartupLocation="CenterScreen">
+        Title="Регистрация" 
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResize">
     <Viewbox>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -16,14 +18,14 @@
             <StackPanel Grid.Column="0" Margin="-1,0,396,0">
 
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="/Images/logo.jpg" 
+                    <Image Source="Resources/logo.png" 
                     Width="40"
-                    Margin="0,10,0,0"/>
+                    Margin="10,5,10,0"/>
                     <TextBlock Text="CORPMESS" 
-                        FontSize="20" 
+                        FontSize="18" 
                       FontWeight="Bold"
                       HorizontalAlignment="Left"
-                      Margin="10,15,0,5"/>
+                      Margin="0,10,0,5"/>
                 </StackPanel>
 
                 <!-- Заголовок -->
@@ -31,8 +33,8 @@
                     FontSize="20" 
                     FontWeight="Bold"
                     HorizontalAlignment="Center"
-                    Margin="0,20,0,5"/> 
- 
+                    Margin="0,20,0,5"/>
+
                 <TextBlock Text="на корпоративный портал!" 
                     FontWeight="Bold"
                     FontSize="20"
@@ -40,18 +42,15 @@
                     Margin="0,0,0,30"/>
                 <Image Height="230" 
                 Margin="20"
-                Source="/Images/fon.png"/>
+                Source="Resources/fon.png"/>
 
             </StackPanel>
 
-            <StackPanel Background="#E9EBD0" Margin="339,0,-27,0" Grid.ColumnSpan="2">
-                <Border 
-             Background="#E9EBD0" 
-             BorderThickness="1,0,0,0" 
-             BorderBrush="#BE5C38"
-             Width="429"
-             Height="432"
-             HorizontalAlignment="Center">
+            <StackPanel  Margin="339,0,0,0">
+                <Border  Margin="0,15,0,0"
+                         Background="#E9EBD0" 
+                         Width="395"
+                         Height="408">
 
                     <StackPanel Margin="20,0,20,0" VerticalAlignment="Center" Height="400">
 
@@ -60,7 +59,7 @@
                         FontSize="18" 
                         FontWeight="Bold"
                         HorizontalAlignment="Center"
-                        Margin="0,0,0,15"/>
+                        Margin="0,10,0,15"/>
 
                         <!-- Подзаголовок -->
                         <TextBlock Text="Зарегистрируйтесь в системе, чтобы стать частью портала" 
@@ -99,7 +98,7 @@
                                    VerticalAlignment="Top"/>
                             <TextBox Style="{StaticResource placeHolder}" Tag="Дата рождения" x:Name="BirthDateTxb"
                                    Height="25" Width="250"
-                                   Margin="0,0,0,10" Padding="0,2,0,0" 
+                                   Margin="0,0,0,5" Padding="0,2,0,0" 
                                    TextWrapping="Wrap" 
                                    VerticalAlignment="Top"/>
                         </StackPanel>
@@ -108,6 +107,7 @@
 
                         <!-- Кнопки -->
                         <Button x:Name="RegisrtButton" 
+                        Style="{StaticResource LogoutButtonStyle}"
                                  Content="Зарегистрироваться" 
                                  Background="#445859" 
                                  Foreground="White"
@@ -117,24 +117,14 @@
                                  BorderThickness="0"
                                  Margin="0,0,0,15"
                                  Click="RegisrtButton_Click"/>
-                        <TextBlock HorizontalAlignment="Center">
-                        Уже есть аккаунт? 
-                            <Hyperlink         
+                        <TextBlock HorizontalAlignment="Center" FontSize="14" FontWeight="SemiBold"><Run Text="Уже есть аккаунт? "/><Hyperlink         
                                 x:Name="LoginHl"
                                 Click="LoginHl_Click"
                                 TextDecorations="None"
                                 Foreground="Blue"
-                                Cursor="Hand">
-                                Войти
-                            </Hyperlink>
-                        </TextBlock>
+                                Cursor="Hand"><Run Text="Войти"/></Hyperlink></TextBlock>
 
-                        <!-- Футер -->
-                        <TextBlock Text="© Kir, 2025. Собственная разработка для диплома." 
-                        FontSize="10"
-                        HorizontalAlignment="Center"
-                        Margin="0,15,0,0"
-                        Foreground="#757575"/>
+
                     </StackPanel>
                 </Border>
             </StackPanel>

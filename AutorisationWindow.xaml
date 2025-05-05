@@ -7,8 +7,7 @@
         mc:Ignorable="d"
         Title="Авторизация"
         WindowStartupLocation="CenterScreen"
-        Height="450"
-        Width="800">
+        ResizeMode="CanResize">
 
     <Viewbox>
         <Grid>
@@ -16,16 +15,16 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <StackPanel Grid.Column="0" Margin="0,0,395,0">
+            <StackPanel Grid.Column="0" Margin="0,0,367,0">
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="/Images/logo.jpg" 
+                    <Image Source="Resources/logo.png" 
                        Width="40"
-                       Margin="10,10,0,0"/>
+                       Margin="10,3,10,0"/>
                     <TextBlock Text="CORPMESS" 
-                           FontSize="20" 
+                           FontSize="18" 
                          FontWeight="Bold"
                          HorizontalAlignment="Left"
-                         Margin="10,15,0,5"/>
+                         Margin="0,10,0,5"/>
                 </StackPanel>
 
                 <!-- Заголовок -->
@@ -42,7 +41,7 @@
                        Margin="0,0,0,30"/>
                 <Image Height="230" 
                    Margin="20"
-                   Source="/Images/fon.png"/>
+                   Source="Resources/fon.png"/>
 
             </StackPanel>
 
@@ -55,8 +54,9 @@
                 Height="400"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center">
+                    
 
-                    <StackPanel Margin="20,0,20,0" VerticalAlignment="Center" Height="313">
+                    <StackPanel Margin="20,0,20,0" VerticalAlignment="Center" Height="327">
 
                         <!-- Заголовок авторизации -->
                         <TextBlock Text="Авторизация" 
@@ -71,7 +71,7 @@
                            HorizontalAlignment="Center"
                            Margin="0,0,0,20"
                            TextWrapping="Wrap"
-                           TextAlignment="Center"/>
+                           TextAlignment="Center" Width="243"/>
 
                         <!-- Поля ввода -->
                         <StackPanel Margin="0,0,0,15">
@@ -83,28 +83,28 @@
 
                             <PasswordBox x:Name="Passbx"
                                          Width="250"
-                                         Height="25"/>
+                                         Height="25"
+                                         Margin="0,0,0,20"/>
                         </StackPanel>
 
                         <!-- Чекбокс "Запомнить меня" -->
                         <CheckBox x:Name="RememberCheckBox" 
                           Content="Запомнить меня на этом компьютере"                          
-                          Margin="5,0,0,20" Width="234"/>
-
+                          Margin="5,0,0,30" Width="234"/>
                         <!-- Кнопки -->
-                        <Button x:Name="LoginButton" 
+                        <Button x:Name="LoginButton"
+                        Style="{StaticResource LogoutButtonStyle}"
                         Content="Войти" 
                         Background="#445859" 
                         Foreground="White"
                         FontWeight="Bold"
                             Width="150"
                         Height="35"
-                        BorderThickness="0"
                         Margin="0,0,0,10"
-                        Command="{Binding LoginCommand}"
                                 Click="LoginButton_Click"/>
 
                         <Button x:Name="RegisrtButton" 
+                        Style="{StaticResource LogoutButtonStyle}"
                         Content="Регистрация" 
                         Background="#445859" 
                         Foreground="White"
@@ -116,12 +116,7 @@
                                 Click="RegisrtButton_Click"/>
                         <!--Command="{Binding RegisterCommand}"-->
 
-                        <!-- Футер -->
-                        <TextBlock Text="© Kir, 2025. Собственная разработка для диплома." 
-                           FontSize="10"
-                           HorizontalAlignment="Center"
-                           Margin="0,15,0,0"
-                           Foreground="#757575"/>
+                        
                     </StackPanel>
                 </Border>
             </StackPanel>

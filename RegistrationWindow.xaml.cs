@@ -21,12 +21,13 @@ namespace AppClient
     {
         public RegistrationWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            this.WindowState = WindowState.Maximized;
         }
 
         private void RegisrtButton_Click(object sender, RoutedEventArgs e)
         {
-            new MainClientWindow().Show();
+            new MainFrameWindow().Show();
             this.Close();
         }
 
